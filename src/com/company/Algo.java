@@ -45,10 +45,8 @@ public class Algo {
 
         for ( int i=1; i<size; i++) {
             temp = arr[i];
-            for ( j = i; j>0 && arr[j] < arr[j-1]; j--) {
-                if (arr[j] < arr[j - 1]) {
-                    arr[j] = arr[j - 1];
-                }
+            for ( j = i; j>0 && temp < arr[j-1]; j--) {
+                arr[j] = arr[j - 1];
             }
             arr[j] = temp;
         }
