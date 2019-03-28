@@ -1,25 +1,31 @@
+/*
+This java class contains different algorithms implemented in the form of functions
+Selection sort
+Insertion sort
+ */
+
 package com.company;
 
 public class Algo {
 
-    int arr[] = {5,0,2,6,9};
-    int size = arr.length;
+    private int[] arr = {5,0,2,6,9};
+    private int size = arr.length;
 
-    public void print_arr() {
+    private void print_arr() {
         for (int i:arr) {
             System.out.print(i + " ");
         }
         System.out.println();
     }
 
-    public void swap_index(int x, int y) {
+    private void swap_index(int x, int y) {
         int tmp = arr[x];
         arr[x] = arr[y];
         arr[y] = tmp;
     }
 
     public void selection() {
-        int min = 0;
+        int min;
         for (int j = 0; j < size-1; j++) {
 
             min = j;
@@ -35,7 +41,7 @@ public class Algo {
     }
 
     public void insertion() {
-        int temp=0, j=0;
+        int temp, j;
 
         for ( int i=1; i<size; i++) {
             temp = arr[i];
